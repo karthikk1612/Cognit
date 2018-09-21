@@ -1,0 +1,260 @@
+<html>
+<head>
+    <link href="main.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="bootstrap.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script type="text/javascript" src="qrcode/qrcode.js"></script>
+    <script type="text/javascript" src="qrcode/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+
+    
+
+</head>
+<body>
+    <div class="container">
+<div class="modal-wrap" >
+  <div class="modal-bodies">
+    <div class="modal-body modal-body-step-1 is-showing">
+      <form id="contact-form"  name="myemailform">
+  <div class="row">
+       <div class="col-sm-4">
+           <div class="title"><img src="C18 logo.png" width="50%" height="30%" /></div></div>
+          <div class="col-sm-4">
+              <input type="text" name="name" id="inputName" placeholder="Name" required /></div>
+          <div class="col-sm-4">
+              <input type="text" name="college" id="inputCollege" placeholder="College name" required /></div>
+          <div class="col-sm-4">
+              <input type="email" name="email" id="inputEmail" placeholder="Email" required/></div>
+          <div class="col-sm-4">
+              <input type="password" name="password" id="inputPass" placeholder="Create your cognit'18 password" required /></div>
+          <div class="col-sm-4">
+          <input type="number" id="inputPhone" name="phone" placeholder="Phone number" required/></div>
+          <div class="text-center">
+      <div class="col-sm-4">
+            <div type="submit" class="button" >Submit!</div>
+        </div>
+          </div>
+          </div>
+      </form>
+    </div>
+    <div class="modal-body modal-body-step-2">
+      
+      <form id="form-2">
+          <div class="row">
+              <div class="col-sm-2">
+                  <div class="title"><img src="C18 logo.png" width="50%" height="30%" /></div></div>
+          <div class="col-sm-2">
+              <div class="styled-select blue semi-square">
+         <select name="dept">
+                   <option value="0" disabled selected  >Select your Department</option>
+                   <option value="CSE">CSE</option>
+                   <option value="ECE">ECE</option>
+                   <option value="IT">IT</option>
+                 <option value="MECH">MECH</option>
+                 <option value="CIVIL">CIVIL</option>
+                 <option value="OTHERS">OTHERS</option> 
+                  </select></div> </div>
+               <div class="col-sm-2">
+                   <div class="styled-select blue semi-square">
+                      <select name="year">
+                   <option value="0" disabled selected>Select your Year</option>
+                   <option value="I">I </option>
+                   <option value="II">II</option>
+                   <option value="III">III</option>
+                 <option value="IV">IV</option>
+                  </select></div>
+            </div>
+               <div class="col-sm-2">
+                   <div class="styled-select blue semi-square">
+                      <select name="workshop">
+                   <option value="0" disabled selected>Are you willing to attend the XR workshop?</option>
+                   <option value="Yes"> Yes</option>
+                   <option value="No">No</option>
+                  </select></div>
+            </div>   
+              
+              
+              <div class="col-sm-2">  
+        <div class="text-center fade-in">
+          <div class="button">REGISTER!</div>
+        </div>
+              </div>
+          </div>
+          
+      </form>
+    </div>
+    <div class="modal-body modal-body-step-3">
+        <div class="row">
+              <div class="col-sm-2">
+                  <div class="title"><img src="C18 logo.png" width="50%" height="30%" /></div></div>
+            <div class="col-sm-2">
+                <div class="description">Thanks for Registering to Cognit 18,Please take a screenshot of the below QR code.</div></div>
+           <div class="col-sm-2">
+                <div class="title" style="position: relative;left: 30%;"><div class="col-sm-2" width="150px" height="150px" id="qrcode" ></div></div></div>
+            <div class="text-center">
+            <div class="col-sm-2">
+          <div  >Done!</div></div>
+      </div>
+    </div>
+  </div>
+         </div>
+        </div></div>
+    
+     <div style="width:100dw;margin: 0;padding:0;overflow: hidden;position: absolute;z-index: 10;">
+<div class="card" id="cardnav" style="position:fixed;border:10px;bottom:0%;width:100%;background-color:rgb(44,46,123);">
+<div class="card-header" id="nav" style="background-color:rgba(255,255,255,0);border:0;">
+<ul class="nav card-header-s" style="color:rgb(255,255,255);font-family:'Roboto Condensed', sans-serif;">
+<li class="nav-item"><a class="nav-link active" href="About Us/About.html" style="color:rgb(255,255,255);" id="events">About Us</a></li>
+<li class="nav-item"><a class="nav-link active" href="login.html" style="color:rgb(255,255,255);" id="register">Login</a></li>
+<li class="nav-item justify-content-center"><a class="nav-link active d-inline-block" href="../cat.html" style="color:rgb(255,255,255);" id="aboutus">Events</a></li></ul>
+    </div> </div>
+    </div>
+    <div id="scene">
+         <div id="particles-js" data-depth="0.8" ></div>
+        </div>
+    <script type="application/javascript"> 
+    var config = {
+    apiKey: "AIzaSyAbZ17fSqH_b6dPuniLcBCZA03F75bIOaA",
+    authDomain: "cognit-fe8d1.firebaseapp.com",
+    databaseURL: "https://cognit-fe8d1.firebaseio.com",
+    projectId: "cognit-fe8d1",
+    storageBucket: "cognit-fe8d1.appspot.com",
+    messagingSenderId: "87385861336"
+  };
+  firebase.initializeApp(config);
+  const db = firebase.firestore();
+  db.settings({ timestampsInSnapshots: true }); 
+        
+      //SAVING FORM DATA
+        const form = document.querySelector('#contact-form');
+        const form2 =document.querySelector('#form-2');
+        var count,mailflag=0,click=0;
+    //ANIMATED FORM    
+        
+    $(".button").click(function() {
+        count=0;
+        if(!form.email.value || !form.password.value || !form.name.value || !form.college.value || !form.phone.value)
+            {
+                count=1;
+                alert("Please Fill in the boxes!");
+            }
+        
+        if(count==0)
+            {
+         validateemail();       
+            }
+        if(count==0 && mailflag==0)
+            {
+        db.collection('Users').doc(form.phone.value).set({
+        name: form.name.value,
+        college: form.college.value,
+        email:form.email.value,
+        password:form.password.value,
+        phone:form.phone.value,
+        dept:form2.dept.value,
+        year:form2.year.value,
+        workshop:form2.workshop.value
+    });
+                
+          if(click==1)
+              {
+                  makeCode();
+              }                                        
+          click=1;
+  var $btn = $(this),
+    $step = $btn.parents(".modal-body"),
+    stepIndex = $step.index(),
+    $pag = $(".modal-header span").eq(stepIndex);
+
+  if (stepIndex === 0 || stepIndex === 1) {
+    step1($step, $pag);
+  } else {
+    step3($step, $pag);
+  }
+ }
+});
+     
+   function validateemail()  
+{  
+var x=form.email.value;  
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+    mailflag=1;
+  alert("Please enter a valid e-mail address");  
+  }  
+    else{
+        mailflag=0;
+    }
+}        
+    
+        
+function step1($step, $pag) {
+  console.log("step1");
+  // animate the step out
+  $step.addClass("animate-out");
+
+  // animate the step in
+  setTimeout(function() {
+    $step
+      .removeClass("animate-out is-showing")
+      .next()
+      .addClass("animate-in");
+    $pag
+      .removeClass("is-active")
+      .next()
+      .addClass("is-active");
+  }, 600);   
+  // after the animation, adjust the classes
+  setTimeout(function() {
+    $step
+      .next()
+      .removeClass("animate-in")
+      .addClass("is-showing");
+  }, 1200);
+}
+
+function step3($step, $pag) {
+  // animate the step out
+  $step.parents(".modal-wrap").addClass("animate-up");
+
+  setTimeout(function() {
+    $(".rerun-button").css("display", "inline-block");
+  }, 300);
+}
+     
+        
+        
+function makeCode () {
+      var qrcode = new QRCode(document.getElementById("qrcode"), {
+	width : 150,
+	height : 150
+});
+	//var elText = document.getElementById("inputEmail");
+	var myObj,s;
+	myObj = {"name":form.name.value,"email":form.email.value,"phone":form.phone.value,"college":form.college.value,"dept":form2.dept.value,"year":form2.year.value};
+s=JSON.stringify(myObj);
+	qrcode.makeCode(s);
+}
+    
+       
+        //parallax
+        
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene);
+         particlesJS("particles-js", {"particles":{"number":{"value":100,"density":{"enable":false,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"star","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"http://wiki.lexisnexis.com/academic/images/f/fb/Itunes_podcast_icon_300.jpg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":2,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":2,"direction":"left","random":false,"straight":true,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"grab"},"onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":200,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles,stats, update; stats = new Stats(); stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
+        
+   
+    </script>
+</body>
+
+</html>

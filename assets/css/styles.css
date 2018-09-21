@@ -1,0 +1,442 @@
+.navigation {
+  width: 100%;
+  position: absolute;
+  background-color:transparent;
+  z-index: 1;
+  top: 0;
+  height: 40px;
+  left: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  padding-top: 0px;
+ 
+}
+
+.navigation a {
+  text-decoration: none;
+}
+
+.navigation ul {
+  margin-top: 30px;
+  text-align: center;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menulist {
+  width: 200px;
+}
+
+.logo {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.line1,
+.line2,
+.line3 {
+  margin-top: 5px;
+  background-color: #fff;
+  width: 25px;
+  height: 3px;
+  display: block;
+  position: relative;
+  opacity: 1;
+  border-radius: 15%;
+  transition: all 0.3s;
+}
+
+.line1.active {
+  transform: rotate(270deg);
+  opacity: 0;
+  background-color: white;
+  top: 5px;
+}
+
+.line2.active {
+  transform: rotate(45deg);
+  background-color: white;
+}
+
+.line3.active {
+  transform: rotate(-45deg);
+  background-color: white;
+  top: -7px;
+}
+
+.menuitems {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.menuitems:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  transition: width 0.2s;
+}
+
+.menuitems:hover::after {
+  width: 100%;
+}
+
+#closebtn {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  text-decoration: none;
+  top: 10px;
+  left: 25px;
+  font-size: 36px !important;
+  margin-right: 50px;
+  z-index: 100;
+  color: #fff;
+  cursor: pointer;
+  transition: background-position 0.3s;
+}
+
+#main {
+  transition: margin-top 0.4s;
+  text-align: center;
+  margin: 0;
+  padding: 16px;
+  font-size: 30px;
+}
+
+
+
+
+
+
+body {
+  background-color:#161743;
+    position: absolute;
+  font-family: "Lato", sans-serif;
+  overflow: hidden;
+  transition:#161743 0.5s;
+}
+#date{
+ width:320px;
+  height:200px;
+    margin-top: 30%;
+    margin-left: 38%;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-image:url("../img/11aug.png");
+    z-index: 20 ;
+   
+}
+#hero {
+  width:100%;
+  height:100vh;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-image:url("../../assets/img/hero-mobile-final.jpg");
+}
+
+@media (min-width: 768px) {
+  #hero {
+    background-image:url("../../assets/img/hero-desk-final.jpg");
+  }
+    
+}
+
+@media (min-width: 1200px) {
+  #ast {
+    background-repeat:no-repeat;
+    width:100%;
+    height:100vh;
+    background-image:url("../../assets/img/ast.png");
+    background-size:45%;
+    left:60%;
+  }
+    
+    
+}
+
+#ast {
+  left:60%;
+  background-position:center;
+  background-size:contain;
+  background-repeat:no-repeat;
+  width:100%;
+  height:100vh;
+  background-image:url("../../assets/img/ast.png");
+}
+
+#stars {
+  background-image:url("../../assets/img/stars.png");
+  width:100%;
+  height:100vh;
+  background-size:contain;
+  background-repeat:space;
+  background-position:top;
+}
+#starss {
+  background-image:url("../../assets/img/starss.png");
+  width:100%;
+  height:100vh;
+  background-size:cover;
+  background-repeat:repeat;
+  background-position:top;
+}
+
+#litestars {
+  background-image:url("../../assets/img/pla1.png");
+  background-position:center;
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+
+@media (min-width: 768px) {
+  #pla1 {
+    width:100%;
+    height:100vh;
+    background-image:url("../../assets/img/untitled-1.png");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:right;
+    padding-left:0;
+  }
+}
+#starss {
+  background-image:url("../../assets/img/starss.png");
+  width:100%;
+  height:100vh;
+  background-size:cover;
+  background-repeat:repeat;
+  background-position:top;
+}
+
+
+#pla1 {
+  width:100%;
+  height:100vh;
+  background-image:url("../../assets/img/Untitled-1.png");
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+
+#nav {
+}
+
+@media (min-width: 300px) {
+  body {
+    height:100vh;
+    width:100%;
+    overflow:hidden;
+  }
+}
+
+@media (min-width: 300px) {
+  body {
+    height:100vh;
+    width:100%;
+    overflow:hidden;
+  }
+}
+#starss {
+  background-image:url("../../assets/img/starss.png");
+  width:100%;
+  height:100vh;
+  background-size:1q0px;
+  background-repeat:repeat;
+  background-position:top;
+}
+
+@media (min-width: 1200px) {
+  #pla2 {
+    background-image:url("../../assets/img/pla2.png");
+    width:100%;
+    height:100vh;
+    background-repeat:no-repeat;
+    background-size:2%;
+    background-position:right;
+    padding:0;
+    position:fixed;
+    z-index:555;
+  }
+}
+
+#pla2 {
+  background-image:url("../../assets/img/pla2.png");
+  width:100%;
+  height:100vh;
+  background-repeat:no-repeat;
+  background-size:30%;
+  background-position:right;
+  padding:0;
+  z-index:555;
+}
+
+@media (min-width: 1200px) {
+  #pla2 {
+    background-image:url("../../assets/img/pla2.png");
+    width:100%;
+    height:100vh;
+    background-repeat:no-repeat;
+    background-size:5%;
+    margin:05%;
+  }
+}
+
+@media (min-width: 992px) {
+  #pla2 {
+    background-image:url("../../assets/img/pla2.png");
+    width:100%;
+    height:100vh;
+    background-repeat:no-repeat;
+    background-size:10%;
+    background-position:right;
+    padding:0;
+    position:fixed;
+    z-index:555;
+  }
+}
+
+@media (min-width: 768px) {
+  #pla2 {
+    background-image:url("../../assets/img/pla2.png");
+    width:100%;
+    height:100vh;
+    background-repeat:no-repeat;
+    background-size:10%;
+    background-position:right;
+    padding:0;
+    position:fixed;
+    z-index:555;
+  }
+}
+
+@media (min-width: 300px) {
+  #pla2 {
+    background-image:url("../../assets/img/pla2.png");
+    width:100%;
+    height:100vh;
+    background-repeat:no-repeat;
+    background-size:10%;
+    background-position:right;
+    padding:0;
+    position:relative;
+    z-index:555;
+  }
+}
+
+@media (min-width: 300px) {
+  #pla3 {
+    width:100%;
+    height:100vh;
+    background-image:url("../../assets/img/pla3 c.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:left;
+  }
+    #particles-js
+          { 
+             width: 100%;
+              height: 100vh;
+               background-color: transparent;
+                background-image: url("");
+                     }
+
+}
+
+@media (min-width: 768px) {
+  #pla3 {
+    width:100%;
+    height:100vh;
+    background-image:url("../../assets/img/pla3 c.png");
+    background-size:contain;
+    background-repeat:space;
+    background-position:left;
+  }
+    #particles-js
+          { 
+             width: 100%;
+              height: 100vh;
+               background-color: transparent;
+                background-image: url("");
+                     }
+
+}
+
+@media (min-width: 1200px) {
+  #pla3 {
+    width:100%;
+    height:100vh;
+    background-image:url("../../assets/img/pla3 c.png");
+    background-repeat:no-repeat;
+    background-position:left;
+  }
+}
+
+#pla3 {
+  width:100%;
+  height:100vh;
+  background-image:url("../../assets/img/pla3 c.png");
+  background-size:contain;
+  background-position:left;
+}
+
+#eve{
+  width: 50%;
+  margin-left: 26%;
+  top:300px;
+  left: 15px;
+  position: fixed;
+  border-radius: 5px;
+
+}
+
+    /* ---- particles.js container ---- */ 
+          #particles-js
+          { 
+             width: 100%;
+              height: 100vh;
+               background-color: transparent;
+                background-image: url("");
+      
+                     }
+
+
+#hero111 {
+  width:100%;
+  height:100vh;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-image:url("../../assets/img/hero-mobile-final1.png");
+}
+
+@media only screen and (min-width: 768px) {
+  #hero111 {
+    background-image:url("../../assets/img/hero-desk-final1.png");
+    
+  }
+
+}
+
+@media only screen and (max-width: 600px){
+  #eve{
+    position: relative;
+    top:150px;
+    left: -75px;
+    width: 100%;
+  }
+}

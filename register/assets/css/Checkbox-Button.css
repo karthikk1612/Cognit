@@ -1,0 +1,32 @@
+.btn span.glyphicon {
+  opacity:0;
+}
+
+.btn.active span.glyphicon {
+  opacity:1;
+}
+
+a, area, button, input, label, select, summary, textarea {
+  touch-action:manipulation;
+}
+
+@media (min-width: 300px) {
+  body {
+    height:100vh;
+    width:100%;
+    overflow:hidden;
+  }
+}
+
+@media (min-width: 300px) {
+  body {
+  }
+}
+
+#starscopy {
+  background-image:url("../../assets/img/Starsss copy.png");
+  width:100%;
+  height:100vh;
+  background-repeat:round;
+}
+
